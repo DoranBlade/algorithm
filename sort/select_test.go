@@ -3,11 +3,11 @@ package sort
 import "testing"
 
 func TestSelectSort(t *testing.T) {
-	length := 200000
+	length := 20000
 	list := getIntDate(length)
-	result := selectSort(list, "asc")
-	t.Log(result)
-	if  len(result) != length{
+	selectSort(list, "desc")
+	t.Log(list)
+	if  len(list) != length{
 		t.Error("result length error")
 	}
 }
