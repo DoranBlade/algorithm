@@ -1,9 +1,11 @@
 package Model;
 
+import search.SearchKey;
+
 /**
  * created by eric on 18-2-13
  */
-public class Person {
+public class Person implements Comparable<Person>, SearchKey {
 
     private String name;
 
@@ -28,7 +30,7 @@ public class Person {
      * @return 实例
      */
     public static Person instance() {
-        return new Person(FakerUtils.faker.name().firstName(), FakerUtils.faker.number().numberBetween(1, 100));
+        return new Person(FakerUtils.faker.name().firstName(), FakerUtils.faker.number().numberBetween(1, 1000));
     }
 
     public String getName() {
@@ -45,5 +47,33 @@ public class Person {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Person person = (Person) o;
+
+        if (name != null ? !name.equals(person.name) : person.name != null) return false;
+        return age != null ? age.equals(person.age) : person.age == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (age != null ? age.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public int compareTo(Person person) {
+        return this.getAge() - person.getAge();
+    }
+
+    @Override
+    public int getKey() {
+        return getAge();
     }
 }

@@ -8,33 +8,14 @@ import java.util.Comparator;
  */
 public class BubbleSort {
 
-    /**
-     * 生序排序
-     * @param source 源数据
-     * @param comparator 比较器
-     * @param <T> 数据类型
-     */
     public static <T> void sortByAsc(T[] source, Comparator<T> comparator) {
         sort(source, comparator, SortEnum.ASC);
     }
 
-    /**
-     * 降序排序
-     * @param source 源数据
-     * @param comparator 比较器
-     * @param <T> 数据类型
-     */
     public static <T> void sortByDesc(T[] source, Comparator<T> comparator) {
         sort(source, comparator, SortEnum.DESC);
     }
 
-    /**
-     * 排序
-     * @param source 源数据
-     * @param comparator 比较器
-     * @param sortEnum 排序方式
-     * @param <T> 数据类型
-     */
     private static <T> void sort(T[] source, Comparator<T> comparator, SortEnum sortEnum) {
         for (int i = 0; i < source.length; i++) {
             for (int j = 0; j < source.length - i - 1; j++) {

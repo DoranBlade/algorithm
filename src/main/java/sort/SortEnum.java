@@ -8,6 +8,6 @@ public enum SortEnum {
     // 倒序
     DESC,
 
-    // 正序
+    // 升序
     ASC
 }

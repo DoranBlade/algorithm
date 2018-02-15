@@ -29,11 +29,12 @@ public class InsertSort {
 
     /**
      * 检查是否需要转换
-     * @param t1 第一个元素
-     * @param t2 第二个元素
+     *
+     * @param t1         第一个元素
+     * @param t2         第二个元素
      * @param comparator 比较器
-     * @param sortEnum 排序方式
-     * @param <T> 元素类型
+     * @param sortEnum   排序方式
+     * @param <T>        元素类型
      * @return 检查结果
      */
     private static <T> boolean check(T t1, T t2, Comparator<T> comparator, SortEnum sortEnum) {
