@@ -1,6 +1,4 @@
-package search;
-
-import java.util.Comparator;
+package net.usepower.algorithm.search;
 
 /**
  * 二分查找
@@ -8,7 +6,7 @@ import java.util.Comparator;
  */
 public class BinarySearch {
 
-    public static <T> int search(T[] source, T value, Comparator<T> comparator) {
+    public int search(int[] source, int value) {
         if (source == null || source.length == 0) {
             return -1;
         }
@@ -17,9 +15,9 @@ public class BinarySearch {
         high = source.length;
         while (low <= high) {
             mid = (low + high) / 2;
-            if (comparator.compare(source[mid], value) > 0) {
+            if (source[mid] - value > 0) {
                 high = mid - 1;
-            } else if (comparator.compare(source[mid], value) < 0) {
+            } else if (source[mid] - value < 0) {
                 low = mid + 1;
             } else {
                 return mid;

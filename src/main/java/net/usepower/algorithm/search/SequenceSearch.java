@@ -1,4 +1,4 @@
-package search;
+package net.usepower.algorithm.search;
 
 /**
  * 顺序查找
@@ -6,12 +6,12 @@ package search;
  */
 public class SequenceSearch {
 
-    public static <T> int search(T[] source, T value) {
+    public  int search(int[] source, int value) {
         if (source == null || source.length == 0) {
             return -1;
         }
         for (int i = 0; i < source.length; i++) {
-            if (source[i].equals(value)) {
+            if (source[i] == value) {
                 return i;
             }
         }
