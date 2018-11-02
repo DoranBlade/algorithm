@@ -2,7 +2,7 @@ package net.usepower.algorithm.sort.merge;
 
 import net.usepower.algorithm.sort.SortTypeEnum;
 
-public class MergeSort {
+class MergeSort {
 
     void sortByAsc(int[] source) {
         sort(source, SortTypeEnum.ASC);

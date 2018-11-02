@@ -4,11 +4,11 @@ package net.usepower.algorithm.search;
  * 二叉树
  * created by eric on 18-2-14
  */
-public class BinaryTree {
+class BinaryTree {
 
     private BinaryTreeNode root;
 
-    public BinaryTree(BinaryTreeNode root) {
+    BinaryTree(BinaryTreeNode root) {
         this.root = root;
     }
 
@@ -18,7 +18,7 @@ public class BinaryTree {
      * @param key 查询主键值
      * @return 查询结果
      */
-    public Integer search(int key) {
+    Integer search(int key) {
         return search(this.root, key);
     }
 
@@ -43,14 +43,14 @@ public class BinaryTree {
      *
      * @param t 元素类型
      */
-    public void insert(int t) {
+    void insert(int t) {
         this.root.insert(new BinaryTreeNode(t));
     }
 
     /**
      * 删除二叉树元素
      */
-    public void delete(int key) {
+    void delete(int key) {
         delete(null, this.root, key);
     }
 
@@ -139,7 +139,7 @@ public class BinaryTree {
      * @param source
      * @return
      */
-    public static  BinaryTree instance(int[] source) {
+    static  BinaryTree instance(int[] source) {
         BinaryTreeNode[] binaryTreeNode = convert(source);
         BinaryTree binaryTree = new BinaryTree(binaryTreeNode[0]);
         for (BinaryTreeNode item : binaryTreeNode) {

@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class BinaryTreeNode {
+class BinaryTreeNode {
 
     // 节点值
     private Integer value;
@@ -22,11 +22,11 @@ public class BinaryTreeNode {
     // 右子节点
     private BinaryTreeNode right;
 
-    public BinaryTreeNode(Integer value) {
+    BinaryTreeNode(Integer value) {
         this.value = value;
     }
 
-    public void insert(BinaryTreeNode node) {
+    void insert(BinaryTreeNode node) {
         if (getValue() - node.getValue() > 0) {
             if (this.getLeft() == null) {
                 this.setLeft(node);

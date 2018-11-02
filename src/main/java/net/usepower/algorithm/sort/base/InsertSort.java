@@ -17,7 +17,7 @@ public class InsertSort {
         sort(source, SortTypeEnum.ASC);
     }
 
-    void sort(int[] source, SortTypeEnum sortTypeEnum) {
+    private void sort(int[] source, SortTypeEnum sortTypeEnum) {
         int currentIndex;
         for (int i = 1; i < source.length; i++) {
             currentIndex = i;

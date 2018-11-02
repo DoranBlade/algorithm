@@ -4,9 +4,9 @@ package net.usepower.algorithm.search;
  * 二分查找
  * created by eric on 18-2-14
  */
-public class BinarySearch {
+class BinarySearch {
 
-    public int search(int[] source, int value) {
+    int search(int[] source, int value) {
         if (source == null || source.length == 0) {
             return -1;
         }

@@ -4,9 +4,9 @@ package net.usepower.algorithm.search;
  * 顺序查找
  * created by eric on 18-2-14
  */
-public class SequenceSearch {
+class SequenceSearch {
 
-    public  int search(int[] source, int value) {
+    int search(int[] source, int value) {
         if (source == null || source.length == 0) {
             return -1;
         }

@@ -16,7 +16,7 @@ class HillSort {
         sort(source, SortTypeEnum.ASC);
     }
 
-    void sort(int[] source, SortTypeEnum sortTypeEnum) {
+    private void sort(int[] source, SortTypeEnum sortTypeEnum) {
         int i, j;
         // 初始化跳跃增量
         int increment = source.length;

@@ -17,7 +17,7 @@ class SelectSort {
         sort(source, SortTypeEnum.ASC);
     }
 
-    void sort(int[] source, SortTypeEnum sortTypeEnum) {
+    private void sort(int[] source, SortTypeEnum sortTypeEnum) {
         // 符合条件的索引
         int selectIndex;
 
